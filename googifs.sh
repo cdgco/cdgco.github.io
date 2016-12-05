@@ -55,7 +55,7 @@ fi
 echo -n "Do you have a Personal Giphy API Key (y/n)? "
 read apia
 
-if echo "$apia" | grep -iq "^n" ;then
+if echo "$apia" | grep -iq "^y" ;then
 read -p "Please specify Giphy API Key: " APIKEYA
 
 if [[ -z "$APIKEYA" ]];then
