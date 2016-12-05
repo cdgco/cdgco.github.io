@@ -77,8 +77,8 @@ fi
 
 sed -i -e"s/NULL3/'$EMAILA'/" config.php
 
-printf '\n'
-echo "GooGifs has now been succesfully configured!"
+printf "\nGooGifs has now been succesfully configured!\n\n"
+printf "\n`echo 'Access GooGifs at http://'``wget http://ipinfo.io/ip -qO -``echo '/INSTALL-LOCATION/GooGifs'`\n"
 
 
 else
