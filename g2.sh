@@ -33,7 +33,7 @@ sleep .8
 echo "Connecting to GooGifs Repository ..."
 sleep .2
 git clone https://github.com/cdgco/GooGifs.git
-cd GooGifs || echo "Error entering GooGifs directory. Exiting ..."; exit $ERRCODE;
+cd GooGifs || echo "Error entering GooGifs directory. Exiting ..." && exit $ERRCODE
 rm composer.json
 rm appveyor.yml
 rm README.md
