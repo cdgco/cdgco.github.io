@@ -37,6 +37,8 @@ cd GooGifs
 rm composer.json
 rm appveyor.yml
 rm README.md
+rm img/HomeSS.png
+rm img/Test.png
 printf '\n'
 echo -n "Would you like to configure GooGifs now (y/n)? "
 read answer
