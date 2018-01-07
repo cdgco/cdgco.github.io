@@ -55,7 +55,7 @@ if [ "$OS" == "Ubuntu" ] || [ "$OS" == "Debian" ]; then
 		rm 'VWI Banner.png'
 	fi
 	chmod 777 includes
-	printf "\nInstalling Language Packages ... (This will take a while)\n"
+	printf "\nInstalling Language Packages ...\n"
 	locale-gen ar_EG.utf8
 	locale-gen bs_BA.utf8
 	locale-gen cs_CZ.utf8
@@ -137,6 +137,6 @@ elif [ "$OS" == "CentOS Linux" ] || [ "$OS" == "RHEL" ]; then
 	fi
 	printf "\nInstallation Complete! Please visit your website online to finish configuration.\n"
 else
-	echo 'Error: VWI can only be installed on Debian, Ubuntu, CentOS, or RHEL. Exiting ...'
+	echo 'Error: VWI can only be installed on Debian, Ubuntu, CentOS, or RHEL. Exiting ...\n'
 	exit 1
 fi
