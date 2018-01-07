@@ -49,11 +49,7 @@ if [ "$OS" == "Ubuntu" ] || [ "$OS" == "Debian" ]; then
 
 	printf "\nInstalling Vesta Web Interface frontend ...\n"
 	git clone --quiet https://github.com/cdgco/VestaWebInterface . > /dev/null
-	if [ -f install1.sh ] ; then
-		rm install1.sh
-	elif [ -f install2.sh ] ; then
-		rm install2.sh
-	elif [ -f README.md ] ; then
+	if [ -f README.md ] ; then
 		rm README.md
 	elif [ -f 'VWI Banner.png' ] ; then
 		rm 'VWI Banner.png'
@@ -125,11 +121,7 @@ elif [ "$OS" == "CentOS Linux" ] || [ "$OS" == "RHEL" ]; then
 	fi
 	printf "\nInstalling Vesta Web Interface frontend ...\n"
 	git clone --quiet https://github.com/cdgco/VestaWebInterface . > /dev/null
-	if [ -f install1.sh ] ; then
-		rm install1.sh
-	elif [ -f install2.sh ] ; then
-		rm install2.sh
-	elif [ -f README.md ] ; then
+	if [ -f README.md ] ; then
 		rm README.md
 	elif [ -f 'VWI Banner.png' ] ; then
 		rm 'VWI Banner.png'
