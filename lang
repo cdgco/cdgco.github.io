@@ -1,0 +1,59 @@
+#!/bin/bash
+
+if [ "x$(id -u)" != 'x0' ]; then
+	echo 'Error: this script can only be executed by root'
+	exit 1
+elif [ -f /etc/os-release ]; then
+    . /etc/os-release
+    OS=$NAME
+elif type lsb_release >/dev/null 2>&1; then
+    OS=$(lsb_release -si)
+elif [ -f /etc/lsb-release ]; then
+    . /etc/lsb-release
+    OS=$DISTRIB_ID
+elif [ -f /etc/debian_version ]; then
+    OS=Debian
+elif [ -f /etc/redhat-release ]; then
+    OS=RHEL
+else
+    OS=$(uname -s)
+fi
+
+if [ "$OS" == "Ubuntu" ] || [ "$OS" == "Debian" ]; then 
+	printf "\nInstalling Language Packages ...\n"
+	locale-gen ar_EG.utf8 > /dev/null
+	locale-gen bs_BA.utf8 > /dev/null
+	locale-gen zh_CN.utf8 > /dev/null
+	locale-gen da_DK.utf8 > /dev/null
+	locale-gen de_DE.utf8 > /dev/null
+	locale-gen el_GR.utf8 > /dev/null
+	locale-gen en_US.utf8 > /dev/null
+	locale-gen es_US.utf8 > /dev/null
+	locale-gen fa_IR > /dev/null
+	locale-gen fi_FI.utf8 > /dev/null
+	locale-gen fr_FR.utf8 > /dev/null
+	locale-gen hu_HU.utf8 > /dev/null
+	locale-gen id_ID.utf8 > /dev/null
+	locale-gen it_IT.utf8 > /dev/null
+	locale-gen ja_JP.utf8 > /dev/null
+	locale-gen ka_GE.utf8 > /dev/null
+	locale-gen nl_NL.utf8 > /dev/null
+	locale-gen nn_NO.utf8 > /dev/null
+	locale-gen pl_PL.utf8 > /dev/null
+	locale-gen pt_BR.utf8 > /dev/null
+	locale-gen pt_PT.utf8 > /dev/null
+	locale-gen ro_RO.utf8 > /dev/null
+	locale-gen ru_RU.utf8 > /dev/null
+	locale-gen sv_SE.utf8 > /dev/null
+	locale-gen tr_TR.utf8 > /dev/null
+	locale-gen zh_TW.utf8 > /dev/null
+	locale-gen uk_UA.utf8 > /dev/null
+	locale-gen vi_VN > /dev/null
+	printf "\nInstallation Complete! Please visit your website online to finish configuration.\n"
+elif [ "$OS" == "CentOS Linux" ] || [ "$OS" == "RHEL" ]; then
+	printf "Language Packages not necessary for CentOS or RHEL. Exiting ..."
+  exit 1
+else
+	echo 'Error: VWI can only be installed on Debian, Ubuntu, CentOS, or RHEL. Exiting ...'
+	exit 1
+fi
