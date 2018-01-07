@@ -52,9 +52,9 @@ if [ "$OS" == "Ubuntu" ] || [ "$OS" == "Debian" ]; then
 	locale-gen fr_FR.utf8
 	printf "\nInstallation Complete!\n"
 elif [ "$OS" == "CentOS Linux" ] || [ "$OS" == "RHEL" ]; then
-	printf "Language Packages not necessary for CentOS or RHEL. Exiting ..."
+	printf "Language Packages not necessary for CentOS or RHEL. Exiting ...\n"
   exit 1
 else
-	echo 'Error: VWI can only be installed on Debian, Ubuntu, CentOS, or RHEL. Exiting ...'
+	printf "Error: VWI can only be installed on Debian, Ubuntu, CentOS, or RHEL. Exiting ...\n"
 	exit 1
 fi
