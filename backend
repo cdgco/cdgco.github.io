@@ -68,6 +68,6 @@ elif [ "$OS" == "CentOS Linux" ] || [ "$OS" == "RHEL" ]; then
 	fi
 	printf "\nInstallation Complete! Please visit your website online to finish configuration.\n"
 else
-	echo 'Error: VWI can only be installed on Debian, Ubuntu, CentOS, or RHEL. Exiting ...'
+	echo 'Error: VWI can only be installed on Debian, Ubuntu, CentOS, or RHEL. Exiting ...\n'
 	exit 1
 fi
