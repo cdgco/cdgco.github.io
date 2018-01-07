@@ -56,35 +56,67 @@ if [ "$OS" == "Ubuntu" ] || [ "$OS" == "Debian" ]; then
 	fi
 	chmod 777 includes
 	printf "\nInstalling Language Packages ...\n"
-	locale-gen ar_EG.utf8
-	locale-gen bs_BA.utf8
-	locale-gen cs_CZ.utf8
-	locale-gen zh_CN.utf8
-	locale-gen da_DK.utf8
-	locale-gen de_DE.utf8
-	locale-gen el_GR.utf8
-	locale-gen fa_IR
-	locale-gen fi_FI.utf8
-	locale-gen hu_HU.utf8
-	locale-gen id_ID.utf8
-	locale-gen it_IT.utf8
-	locale-gen ja_JP.utf8
-	locale-gen ka_GE.utf8
-	locale-gen nl_NL.utf8
-	locale-gen nn_NO.utf8
-	locale-gen pl_PL.utf8
-	locale-gen pt_BR.utf8
-	locale-gen pt_PT.utf8
-	locale-gen ro_RO.utf8
-	locale-gen ru_RU.utf8
-	locale-gen sv_SE.utf8
-	locale-gen tr_TR.utf8
-	locale-gen zh_TW.utf8
-	locale-gen uk_UA.utf8
-	locale-gen vi_VN
-	locale-gen es_US.utf8
-	locale-gen en_US.utf8
-	locale-gen fr_FR.utf8
+	if [ ! locale -a | grep ar_EG.utf8 ] ; then
+		locale-gen ar_EG.utf8
+	elif [ ! locale -a | grep bs_BA.utf8 ] ; then
+		locale-gen bs_BA.utf8
+	elif [ ! locale -a | grep cs_CZ.utf8 ] ; then
+		locale-gen cs_CZ.utf8
+	elif [ ! locale -a | grep zh_CN.utf8 ] ; then
+		locale-gen zh_CN.utf8
+	elif [ ! locale -a | grep da_DK.utf8 ] ; then
+		locale-gen da_DK.utf8
+	elif [ ! locale -a | grep de_DE.utf8 ] ; then
+		locale-gen de_DE.utf8
+	elif [ ! locale -a | grep el_GR.utf8 ] ; then
+		locale-gen el_GR.utf8
+	elif [ ! locale -a | grep fa_IR ] ; then
+		locale-gen fa_IR
+	elif [ ! locale -a | grep fi_FI.utf8 ] ; then
+		locale-gen fi_FI.utf8
+	elif [ ! locale -a | grep hu_HU.utf8 ] ; then
+		locale-gen hu_HU.utf8
+	elif [ ! locale -a | grep id_ID.utf8 ] ; then
+		locale-gen id_ID.utf8
+	elif [ ! locale -a | grep it_IT.utf8 ] ; then
+		locale-gen it_IT.utf8
+	elif [ ! locale -a | grep ja_JP.utf8 ] ; then
+		locale-gen ja_JP.utf8
+	elif [ ! locale -a | grep ka_GE.utf8 ] ; then
+		locale-gen ka_GE.utf8
+	elif [ ! locale -a | grep nl_NL.utf8 ] ; then
+		locale-gen nl_NL.utf8
+	elif [ ! locale -a | grep nn_NO.utf8 ] ; then
+		locale-gen nn_NO.utf8
+	elif [ ! locale -a | grep pl_PL.utf8 ] ; then
+		locale-gen pl_PL.utf8
+	elif [ ! locale -a | grep pt_BR.utf8 ] ; then
+		locale-gen pt_BR.utf8
+	elif [ ! locale -a | grep pt_PT.utf8 ] ; then
+		locale-gen pt_PT.utf8
+	elif [ ! locale -a | grep ro_RO.utf8 ] ; then
+		locale-gen ro_RO.utf8
+	elif [ ! locale -a | grep ru_RU.utf8 ] ; then
+		locale-gen ru_RU.utf8
+	elif [ ! locale -a | grep sv_SE.utf8 ] ; then
+		locale-gen sv_SE.utf8
+	elif [ ! locale -a | grep tr_TR.utf8 ] ; then
+		locale-gen tr_TR.utf8
+	elif [ ! locale -a | grep zh_TW.utf8 ] ; then
+		locale-gen zh_TW.utf8
+	elif [ ! locale -a | grep uk_UA.utf8 ] ; then
+		locale-gen uk_UA.utf8
+	elif [ ! locale -a | grep vi_VN ] ; then
+		locale-gen vi_VN
+	elif [ ! locale -a | grep es_US.utf8 ] ; then
+		locale-gen es_US.utf8
+	elif [ ! locale -a | grep en_US.utf8 ] ; then
+		locale-gen en_US.utf8
+	elif [ ! locale -a | grep fr_FR.utf8 ] ; then
+		locale-gen fr_FR.utf8
+	else
+		printf "All packages already installed \n"
+	fi
 	printf "Installing Vesta Web Interface backend ...\n"
 	sleep .5
 	wget -q https://raw.githubusercontent.com/cdgco/VestaWebInterface/master/install/web.tar.gz
