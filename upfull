@@ -42,10 +42,10 @@ if [ "$OS" == "Ubuntu" ] || [ "$OS" == "Debian" ]; then
                 echo "git not found. Installing ..."
                 apt-get install -y git > /dev/null
         fi
-  printf "\nUpdating Vesta Web Interface frontend ...\n"
-  git fetch --all
-  git reset --hard origin/master
-  git pull origin master
+ 	printf "\nUpdating Vesta Web Interface frontend ...\n"
+ 	git fetch --all > /dev/null
+  	git reset --hard origin/master > /dev/null
+  	git pull origin master > /dev/null
 	printf "\nUpdating Vesta Web Interface backend ...\n"
 	sleep .5
 	wget -q https://raw.githubusercontent.com/cdgco/VestaWebInterface/master/install/web.tar.gz
@@ -78,9 +78,9 @@ elif [ "$OS" == "CentOS Linux" ] || [ "$OS" == "RHEL" ]; then
 		yum -y install git
 	fi
 	printf "\nUpdating Vesta Web Interface frontend ...\n"
-  git fetch --all
-  git reset --hard origin/master
-  git pull origin master
+  	git fetch --all > /dev/null
+  	git reset --hard origin/master > /dev/null
+  	git pull origin master > /dev/null
 	printf "Updating Vesta Web Interface backend ...\n"
 	sleep .5
 	wget -q https://raw.githubusercontent.com/cdgco/VestaWebInterface/master/install/web.tar.gz
