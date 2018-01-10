@@ -1,0 +1,25 @@
+#!/bin/bash
+
+if [ "x$(id -u)" != 'x0' ]; then
+	echo 'Error: this script can only be executed by root'
+	exit 1
+fi
+printf "\nUninstalling Vesta Web Interface backend ...\n"
+if [ -f /usr/local/vesta/web/templates/r_1.php ] ; then
+  rm /usr/local/vesta/web/templates/r_1.php
+elif [ -f /usr/local/vesta/web/templates/r_2.php ] ; then
+  rm /usr/local/vesta/web/templates/r_2.php
+elif [ -f /usr/local/vesta/web/templates/r_3.php ] ; then
+  rm /usr/local/vesta/web/templates/r_3.php
+elif [ -f /usr/local/vesta/web/reset/reset.php ] ; then
+  rm /usr/local/vesta/web/reset/reset.php
+elif [ -f /usr/local/vesta/web/login/backup.php ] ; then
+  rm /usr/local/vesta/web/login/backup.php
+elif [ -f /usr/local/vesta/web/inc/main-cdg.php ] ; then
+  rm /usr/local/vesta/web/inc/main-cdg.php
+elif [ -f /usr/local/vesta/web/inc/i18n-cdg.php ] ; then
+  rm /usr/local/vesta/web/inc/i18n-cdg.php
+elif [ -d /usr/local/vesta/web/inc/i18n-cdg ] ; then
+  rm /usr/local/vesta/web/inc/i18n-cdg -r
+fi
+printf "\nProcess Complete!.\n"
