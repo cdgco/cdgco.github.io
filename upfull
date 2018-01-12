@@ -53,6 +53,8 @@ if [ "$OS" == "Ubuntu" ] || [ "$OS" == "Debian" ]; then
 		tar -xzf vesta.tar.gz -C /usr/local/vesta
 		rm vesta.tar.gz
 	fi
+	read -p "Enter the full web address of your installation: "
+        echo "<?php \$vwipanel = '$REPLY'; ?>" > /usr/local/vesta/web/vwi/config.php
 	printf "\nUpdate Complete!\n"
 elif [ "$OS" == "CentOS Linux" ] || [ "$OS" == "RHEL" ]; then
 	printf "Checking for required packages ...\n"
@@ -88,6 +90,8 @@ elif [ "$OS" == "CentOS Linux" ] || [ "$OS" == "RHEL" ]; then
 		tar -xzf vesta.tar.gz -C /usr/local/vesta
 		rm vesta.tar.gz
 	fi
+	read -p "Enter the full web address of your installation: "
+        echo "<?php \$vwipanel = '$REPLY'; ?>" > /usr/local/vesta/web/vwi/config.php
 	printf "\nUpdate Complete!\n"
 else
 	echo 'Error: VWI can only be installed on Debian, Ubuntu, CentOS, or RHEL. Exiting ...\n'
