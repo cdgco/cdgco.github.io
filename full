@@ -87,6 +87,11 @@ if [ "$OS" == "Ubuntu" ] || [ "$OS" == "Debian" ]; then
 	locale-gen fr_FR.utf8 > /dev/null
 	printf "Installing Vesta Web Interface backend ...\n"
 	sleep .5
+	if [ -d /usr/local/vesta/softaculous/enduser/themes/default ] ; then
+		cp /usr/local/vesta/softaculous/enduser/themes/default /usr/local/vesta/softaculous/enduser/themes/original-default -r
+	elif [ -d /usr/local/vesta/softaculous/enduser/themes/simple ] ; then
+		cp /usr/local/vesta/softaculous/enduser/themes/simple /usr/local/vesta/softaculous/enduser/themes/original-simple -r
+	fi
 	wget -q https://raw.githubusercontent.com/cdgco/VestaWebInterface/master/install/vesta.tar.gz
 	if [ -f vesta.tar.gz ] ; then
 		tar -xzf vesta.tar.gz -C /usr/local/vesta
@@ -130,6 +135,11 @@ elif [ "$OS" == "CentOS Linux" ] || [ "$OS" == "RHEL" ]; then
 	chmod 777 includes
 	printf "Installing Vesta Web Interface backend ...\n"
 	sleep .5
+	if [ -d /usr/local/vesta/softaculous/enduser/themes/default ] ; then
+		cp /usr/local/vesta/softaculous/enduser/themes/default /usr/local/vesta/softaculous/enduser/themes/original-default -r
+	elif [ -d /usr/local/vesta/softaculous/enduser/themes/simple ] ; then
+		cp /usr/local/vesta/softaculous/enduser/themes/simple /usr/local/vesta/softaculous/enduser/themes/original-simple -r
+	fi
 	wget -q https://raw.githubusercontent.com/cdgco/VestaWebInterface/master/install/vesta.tar.gz
 	if [ -f vesta.tar.gz ] ; then
 		tar -xzf vesta.tar.gz -C /usr/local/vesta
