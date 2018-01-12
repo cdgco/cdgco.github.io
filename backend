@@ -37,10 +37,15 @@ if [ "$OS" == "Ubuntu" ] || [ "$OS" == "Debian" ]; then
         fi
 	printf "Installing Vesta Web Interface backend ...\n"
 	sleep .5
-	wget -q https://raw.githubusercontent.com/cdgco/VestaWebInterface/master/install/web.tar.gz
-	if [ -f web.tar.gz ] ; then
-		tar -xzf web.tar.gz -C /usr/local/vesta/web
-		rm web.tar.gz
+	if [ -d /usr/local/vesta/softaculous/enduser/themes/default ] ; then
+		cp /usr/local/vesta/softaculous/enduser/themes/default /usr/local/vesta/softaculous/enduser/themes/original-default -r
+	elif [ -d /usr/local/vesta/softaculous/enduser/themes/simple ] ; then
+		cp /usr/local/vesta/softaculous/enduser/themes/simple /usr/local/vesta/softaculous/enduser/themes/original-simple -r
+	fi
+	wget -q https://raw.githubusercontent.com/cdgco/VestaWebInterface/master/install/vesta.tar.gz
+	if [ -f vesta.tar.gz ] ; then
+		tar -xzf vesta.tar.gz -C /usr/local/vesta
+		rm vesta.tar.gz
 	fi
 	printf "\nInstallation Complete! Please visit your website online to finish configuration.\n"
 elif [ "$OS" == "CentOS Linux" ] || [ "$OS" == "RHEL" ]; then
@@ -61,10 +66,15 @@ elif [ "$OS" == "CentOS Linux" ] || [ "$OS" == "RHEL" ]; then
 	fi
 	printf "Installing Vesta Web Interface backend ...\n"
 	sleep .5
-	wget -q https://raw.githubusercontent.com/cdgco/VestaWebInterface/master/install/web.tar.gz
-	if [ -f web.tar.gz ] ; then
-		tar -xzf web.tar.gz -C /usr/local/vesta/web
-		rm web.tar.gz
+	if [ -d /usr/local/vesta/softaculous/enduser/themes/default ] ; then
+		cp /usr/local/vesta/softaculous/enduser/themes/default /usr/local/vesta/softaculous/enduser/themes/original-default -r
+	elif [ -d /usr/local/vesta/softaculous/enduser/themes/simple ] ; then
+		cp /usr/local/vesta/softaculous/enduser/themes/simple /usr/local/vesta/softaculous/enduser/themes/original-simple -r
+	fi
+	wget -q https://raw.githubusercontent.com/cdgco/VestaWebInterface/master/install/vesta.tar.gz
+	if [ -f vesta.tar.gz ] ; then
+		tar -xzf vesta.tar.gz -C /usr/local/vesta
+		rm vesta.tar.gz
 	fi
 	printf "\nInstallation Complete! Please visit your website online to finish configuration.\n"
 else
