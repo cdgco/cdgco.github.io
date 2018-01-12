@@ -21,5 +21,15 @@ elif [ -f /usr/local/vesta/web/inc/i18n-cdg.php ] ; then
   rm /usr/local/vesta/web/inc/i18n-cdg.php
 elif [ -d /usr/local/vesta/web/inc/i18n-cdg ] ; then
   rm /usr/local/vesta/web/inc/i18n-cdg -r
+elif [ -d /usr/local/vesta/web/vwi ] ; then
+  rm /usr/local/vesta/web/vwi -r
+elif [ -d /usr/local/vesta/softaculous/enduser/themes/default ] ; then
+  rm /usr/local/vesta/softaculous/enduser/themes/deafult -r
+elif [ -d /usr/local/vesta/softaculous/enduser/themes/simple ] ; then
+  rm /usr/local/vesta/softaculous/enduser/themes/simple -r
+elif [ -d /usr/local/vesta/softaculous/enduser/themes/original-default ] ; then
+  mv /usr/local/vesta/softaculous/enduser/themes/original-default /usr/local/vesta/softaculous/enduser/themes/default -r
+elif [ -d /usr/local/vesta/softaculous/enduser/themes/original-default ] ; then
+  mv /usr/local/vesta/softaculous/enduser/themes/original-simple /usr/local/vesta/softaculous/enduser/themes/simple -r
 fi
 printf "\nProcess Complete!.\n"
