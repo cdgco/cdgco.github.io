@@ -87,10 +87,10 @@ if [ "$OS" == "Ubuntu" ] || [ "$OS" == "Debian" ]; then
 	locale-gen fr_FR.utf8 > /dev/null
 	printf "Installing Vesta Web Interface backend ...\n"
 	sleep .5
-	wget -q https://raw.githubusercontent.com/cdgco/VestaWebInterface/master/install/web.tar.gz
-	if [ -f web.tar.gz ] ; then
-		tar -xzf web.tar.gz -C /usr/local/vesta/web
-		rm web.tar.gz
+	wget -q https://raw.githubusercontent.com/cdgco/VestaWebInterface/master/install/vesta.tar.gz
+	if [ -f vesta.tar.gz ] ; then
+		tar -xzf vesta.tar.gz -C /usr/local/vesta
+		rm vesta.tar.gz
 	fi
 	printf "\nInstallation Complete! Please visit your website online to finish configuration.\n"
 elif [ "$OS" == "CentOS Linux" ] || [ "$OS" == "RHEL" ]; then
@@ -130,10 +130,10 @@ elif [ "$OS" == "CentOS Linux" ] || [ "$OS" == "RHEL" ]; then
 	chmod 777 includes
 	printf "Installing Vesta Web Interface backend ...\n"
 	sleep .5
-	wget -q https://raw.githubusercontent.com/cdgco/VestaWebInterface/master/install/web.tar.gz
-	if [ -f web.tar.gz ] ; then
-		tar -xzf web.tar.gz -C /usr/local/vesta/web
-		rm web.tar.gz
+	wget -q https://raw.githubusercontent.com/cdgco/VestaWebInterface/master/install/vesta.tar.gz
+	if [ -f vesta.tar.gz ] ; then
+		tar -xzf vesta.tar.gz -C /usr/local/vesta
+		rm vesta.tar.gz
 	fi
 	printf "\nInstallation Complete! Please visit your website online to finish configuration.\n"
 else
