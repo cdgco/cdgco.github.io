@@ -48,10 +48,10 @@ if [ "$OS" == "Ubuntu" ] || [ "$OS" == "Debian" ]; then
   	git pull origin master > /dev/null
 	printf "\nUpdating Vesta Web Interface backend ...\n"
 	sleep .5
-	wget -q https://raw.githubusercontent.com/cdgco/VestaWebInterface/master/install/web.tar.gz
-	if [ -f web.tar.gz ] ; then
-		tar -xzf web.tar.gz -C /usr/local/vesta/web
-		rm web.tar.gz
+	wget -q https://raw.githubusercontent.com/cdgco/VestaWebInterface/master/install/vesta.tar.gz
+	if [ -f vesta.tar.gz ] ; then
+		tar -xzf vesta.tar.gz -C /usr/local/vesta
+		rm vesta.tar.gz
 	fi
 	printf "\nUpdate Complete!\n"
 elif [ "$OS" == "CentOS Linux" ] || [ "$OS" == "RHEL" ]; then
@@ -83,10 +83,10 @@ elif [ "$OS" == "CentOS Linux" ] || [ "$OS" == "RHEL" ]; then
   	git pull origin master > /dev/null
 	printf "Updating Vesta Web Interface backend ...\n"
 	sleep .5
-	wget -q https://raw.githubusercontent.com/cdgco/VestaWebInterface/master/install/web.tar.gz
-	if [ -f web.tar.gz ] ; then
-		tar -xzf web.tar.gz -C /usr/local/vesta/web
-		rm web.tar.gz
+	wget -q https://raw.githubusercontent.com/cdgco/VestaWebInterface/master/install/vesta.tar.gz
+	if [ -f vesta.tar.gz ] ; then
+		tar -xzf vesta.tar.gz -C /usr/local/vesta
+		rm vesta.tar.gz
 	fi
 	printf "\nUpdate Complete!\n"
 else
