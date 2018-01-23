@@ -55,7 +55,7 @@ if [ "$OS" == "Ubuntu" ] || [ "$OS" == "Debian" ]; then
 		rm 'VWI Banner.png'
 	fi
 	chmod 777 includes
-	printf "\nInstalling Language Packages ...\n"
+	printf "\nInstalling Language Packages ... (May take a while) \n"
 	if [ ! `locale -a | grep 'ar_EG.utf8' &> /dev/null` ] ; then
 		locale-gen ar_EG.utf8
 	elif [ ! `locale -a | grep 'bs_BA.utf8' &> /dev/null` ] ; then
