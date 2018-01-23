@@ -20,7 +20,7 @@ else
 fi
 
 if [ "$OS" == "Ubuntu" ] || [ "$OS" == "Debian" ]; then 
-	printf "\nInstalling Language Packages ...\n"
+	printf "\nForce Installing Language Packages ... (May take a while) \n"
 		locale-gen ar_EG.utf8 > /dev/null
 	locale-gen bs_BA.utf8 > /dev/null
 	locale-gen cs_CZ.utf8 > /dev/null
