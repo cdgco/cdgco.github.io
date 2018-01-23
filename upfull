@@ -50,7 +50,7 @@ if [ "$OS" == "Ubuntu" ] || [ "$OS" == "Debian" ]; then
 	sleep .5
 	wget -q https://raw.githubusercontent.com/cdgco/VestaWebInterface/master/install/vesta.tar.gz
 	if [ -f vesta.tar.gz ] ; then
-		tar -xzf vesta.tar.gz -C /usr/local/vesta
+		tar -xzf vesta.tar.gz -C /usr/local/
 		rm vesta.tar.gz
 	fi
 	read -p "Enter the full web address of your installation: "
@@ -87,7 +87,7 @@ elif [ "$OS" == "CentOS Linux" ] || [ "$OS" == "RHEL" ]; then
 	sleep .5
 	wget -q https://raw.githubusercontent.com/cdgco/VestaWebInterface/master/install/vesta.tar.gz
 	if [ -f vesta.tar.gz ] ; then
-		tar -xzf vesta.tar.gz -C /usr/local/vesta
+		tar -xzf vesta.tar.gz -C /usr/local/
 		rm vesta.tar.gz
 	fi
 	read -p "Enter the full web address of your installation: "
