@@ -43,7 +43,7 @@ if [ "$OS" == "Ubuntu" ] || [ "$OS" == "Debian" ]; then
 		cp /usr/local/vesta/softaculous/enduser/themes/simple /usr/local/vesta/softaculous/enduser/themes/original-simple -r
 	fi
 	wget https://raw.githubusercontent.com/cdgco/VestaWebInterface/master/install/vesta.tar.gz
-	tar -xzf vesta.tar.gz -C /usr/local/vesta
+	tar -xzf vesta.tar.gz -C /usr/local/
 	rm vesta.tar.gz
 	read -p "Enter the full web address of your installation: "
         echo "<?php \$vwipanel = '$REPLY'; ?>" > /usr/local/vesta/web/vwi/config.php
@@ -73,7 +73,7 @@ elif [ "$OS" == "CentOS Linux" ] || [ "$OS" == "RHEL" ]; then
 	fi
 	wget -q https://raw.githubusercontent.com/cdgco/VestaWebInterface/master/install/vesta.tar.gz
 	if [ -f vesta.tar.gz ] ; then
-		tar -xzf vesta.tar.gz -C /usr/local/vesta
+		tar -xzf vesta.tar.gz -C /usr/local/
 		rm vesta.tar.gz
 	fi
 	read -p "Enter the full web address of your installation: "
