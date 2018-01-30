@@ -19,7 +19,7 @@ else
     OS=$(uname -s)
 fi
 
-if [ "$OS" == "Ubuntu" ] || [ "$OS" == "Debian" ]; then 
+if [ "$OS" == "Ubuntu" ] || [ "$OS" == "Debian" ] || [ "$OS" == "Debian GNU/Linux" ]; then 
 	printf "Checking for required packages ...\n"
 	if dpkg -s wget &> /dev/null
         then
