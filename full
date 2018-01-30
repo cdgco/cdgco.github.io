@@ -19,7 +19,7 @@ else
     OS=$(uname -s)
 fi
 
-if [ "$OS" == "Ubuntu" ] || [ "$OS" == "Debian" ]; then 
+if [ "$OS" == "Ubuntu" ] || [ "$OS" == "Debian" ] || [ "$OS" == "Debian GNU/Linux" ]; then 
 	if [ ! -z "$(ls -A ./)" ]; then
 		printf "Error: Directory not empty.\nVWI must be installed in clean directory. Exiting ...\n"
 		exit 1
