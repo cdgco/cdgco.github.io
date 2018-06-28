@@ -15,8 +15,8 @@ elif [ -f /usr/local/vesta/web/reset/reset.php ] ; then
   rm /usr/local/vesta/web/reset/reset.php
 elif [ -f /usr/local/vesta/web/list/rrd/vwi.php ] ; then
   rm /usr/local/vesta/web/list/rrd/vwi.php
-elif [ -f /usr/local/vesta/web/login/backup.php ] ; then
-  rm /usr/local/vesta/web/login/backup.php
+elif [ -f /usr/local/vesta/web/download/backup/vwi.php ] ; then
+  rm /usr/local/vesta/web/download/backup/vwi.php
 elif [ -f /usr/local/vesta/web/inc/main-cdg.php ] ; then
   rm /usr/local/vesta/web/inc/main-cdg.php
 elif [ -f /usr/local/vesta/web/inc/i18n-cdg.php ] ; then
