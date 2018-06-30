@@ -49,12 +49,15 @@ if [ "$OS" == "Ubuntu" ] || [ "$OS" == "Debian" ] || [ "$OS" == "Debian GNU/Linu
 
 	printf "\nInstalling Vesta Web Interface frontend ...\n"
 	git clone --quiet https://github.com/cdgco/VestaWebInterface . > /dev/null
+    git checkout --quiet 56e0236 > /dev/null
 	if [ -f README.md ] ; then
 		rm README.md
 	elif [ -f 'VWI Banner.png' ] ; then
 		rm 'VWI Banner.png'
 	fi
 	chmod 777 includes
+    chmod 777 tmp
+    chmod 777 plugins/images/uploads
 	printf "\nInstalling Language Packages ... (May take a while) \n"
 	if [ ! `locale -a | grep 'ar_EG.utf8' &> /dev/null` ] ; then
 		locale-gen ar_EG.utf8
@@ -124,10 +127,10 @@ if [ "$OS" == "Ubuntu" ] || [ "$OS" == "Debian" ] || [ "$OS" == "Debian GNU/Linu
 	elif [ -d /usr/local/vesta/softaculous/enduser/themes/simple ] ; then
 		cp /usr/local/vesta/softaculous/enduser/themes/simple /usr/local/vesta/softaculous/enduser/themes/original-simple -r
 	fi
-	wget -q https://raw.githubusercontent.com/cdgco/VestaWebInterface/master/install/vesta.tar.gz
-	if [ -f vesta.tar.gz ] ; then
-		tar -xzf vesta.tar.gz -C /usr/local/
-		rm vesta.tar.gz
+	wget -q https://github.com/cdgco/VestaWebInterface/releases/download/v0.5.0-Beta/backend.tar.gz
+	if [ -f backend.tar.gz ] ; then
+		tar -xzf backend.tar.gz -C /usr/local/
+		rm backend.tar.gz
 	fi
 	read -p "Enter the full web address of your installation: "
         echo "<?php \$vwipanel = '$REPLY'; ?>" > /usr/local/vesta/web/vwi/config.php
@@ -161,6 +164,7 @@ elif [ "$OS" == "CentOS Linux" ] || [ "$OS" == "RHEL" ]; then
 	fi
 	printf "\nInstalling Vesta Web Interface frontend ...\n"
 	git clone --quiet https://github.com/cdgco/VestaWebInterface . > /dev/null
+    git checkout --quiet 56e0236 > /dev/null
 	if [ -f README.md ] ; then
 		rm README.md
 	elif [ -f 'VWI Banner.png' ] ; then
@@ -174,10 +178,10 @@ elif [ "$OS" == "CentOS Linux" ] || [ "$OS" == "RHEL" ]; then
 	elif [ -d /usr/local/vesta/softaculous/enduser/themes/simple ] ; then
 		cp /usr/local/vesta/softaculous/enduser/themes/simple /usr/local/vesta/softaculous/enduser/themes/original-simple -r
 	fi
-	wget -q https://raw.githubusercontent.com/cdgco/VestaWebInterface/master/install/vesta.tar.gz
-	if [ -f vesta.tar.gz ] ; then
-		tar -xzf vesta.tar.gz -C /usr/local/
-		rm vesta.tar.gz
+	wget -q https://github.com/cdgco/VestaWebInterface/releases/download/v0.5.0-Beta/backend.tar.gz
+	if [ -f backend.tar.gz ] ; then
+		tar -xzf backend.tar.gz -C /usr/local/
+		rm backend.tar.gz
 	fi
 	read -p "Enter the full web address of your installation: "
         echo "<?php \$vwipanel = '$REPLY'; ?>" > /usr/local/vesta/web/vwi/config.php
