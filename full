@@ -171,6 +171,8 @@ elif [ "$OS" == "CentOS Linux" ] || [ "$OS" == "RHEL" ]; then
 		rm 'VWI Banner.png'
 	fi
 	chmod 777 includes
+    chmod 777 tmp
+    chmod 777 plugins/images/uploads
 	printf "Installing Vesta Web Interface backend ...\n"
 	sleep .5
 	if [ -d /usr/local/vesta/softaculous/enduser/themes/default ] ; then
