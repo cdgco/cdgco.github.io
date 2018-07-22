@@ -42,10 +42,10 @@ if [ "$OS" == "Ubuntu" ] || [ "$OS" == "Debian" ] ||  [ "$OS" == "Debian GNU/Lin
 	elif [ -d /usr/local/vesta/softaculous/enduser/themes/simple ] ; then
 		cp /usr/local/vesta/softaculous/enduser/themes/simple /usr/local/vesta/softaculous/enduser/themes/original-simple -r
 	fi
-	wget -q https://raw.githubusercontent.com/cdgco/VestaWebInterface/master/install/vesta.tar.gz
-	if [ -f vesta.tar.gz ] ; then
-		tar -xzf vesta.tar.gz -C /usr/local/
-		rm vesta.tar.gz
+	wget -q https://github.com/cdgco/VestaWebInterface/releases/download/v0.5.0-Beta/backend.tar.gz
+	if [ -f backend.tar.gz ] ; then
+		tar -xzf backend.tar.gz -C /usr/local/
+		rm backend.tar.gz
 	fi
 	read -p "Enter the full web address of your installation: "
         echo "<?php \$vwipanel = '$REPLY'; ?>" > /usr/local/vesta/web/vwi/config.php
@@ -73,10 +73,10 @@ elif [ "$OS" == "CentOS Linux" ] || [ "$OS" == "RHEL" ]; then
 	elif [ -d /usr/local/vesta/softaculous/enduser/themes/simple ] ; then
 		cp /usr/local/vesta/softaculous/enduser/themes/simple /usr/local/vesta/softaculous/enduser/themes/original-simple -r
 	fi
-	wget -q https://raw.githubusercontent.com/cdgco/VestaWebInterface/master/install/vesta.tar.gz
-	if [ -f vesta.tar.gz ] ; then
-		tar -xzf vesta.tar.gz -C /usr/local/
-		rm vesta.tar.gz
+	wget -q https://github.com/cdgco/VestaWebInterface/releases/download/v0.5.0-Beta/backend.tar.gz
+	if [ -f backend.tar.gz ] ; then
+		tar -xzf backend.tar.gz -C /usr/local/
+		rm backend.tar.gz
 	fi
 	read -p "Enter the full web address of your installation: "
         echo "<?php \$vwipanel = '$REPLY'; ?>" > /usr/local/vesta/web/vwi/config.php
