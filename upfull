@@ -46,7 +46,7 @@ if [ "$OS" == "Ubuntu" ] || [ "$OS" == "Debian" ] || [ "$OS" == "Debian GNU/Linu
  	git fetch --all > /dev/null
   	git reset --hard origin/master > /dev/null
   	git pull origin master > /dev/null
-    git checkout -f f25f086 > /dev/null
+    git checkout -f 94b41e0 > /dev/null
 	printf "\nUpdating Vesta Web Interface backend ...\n"
 	sleep .5
 	wget -q https://github.com/cdgco/VestaWebInterface/releases/download/v0.5.3-Beta/backend.tar.gz
@@ -84,7 +84,7 @@ elif [ "$OS" == "CentOS Linux" ] || [ "$OS" == "RHEL" ]; then
   	git fetch --all > /dev/null
   	git reset --hard origin/master > /dev/null
   	git pull origin master > /dev/null
-    git checkout -f f25f086 > /dev/null
+    git checkout -f 94b41e0 > /dev/null
 	printf "Updating Vesta Web Interface backend ...\n"
 	sleep .5
 	wget -q https://github.com/cdgco/VestaWebInterface/releases/download/v0.5.3-Beta/backend.tar.gz
