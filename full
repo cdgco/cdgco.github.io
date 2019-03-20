@@ -49,7 +49,7 @@ if [ "$OS" == "Ubuntu" ] || [ "$OS" == "Debian" ] || [ "$OS" == "Debian GNU/Linu
 
 	printf "\nInstalling Vesta Web Interface frontend ...\n"
 	git clone --quiet https://github.com/cdgco/VestaWebInterface . > /dev/null
-    git checkout --quiet 2f631fc > /dev/null
+    git checkout --quiet 9911246 > /dev/null
 	if [ -f README.md ] ; then
 		rm README.md
 	elif [ -f 'VWI Banner.png' ] ; then
@@ -127,7 +127,7 @@ if [ "$OS" == "Ubuntu" ] || [ "$OS" == "Debian" ] || [ "$OS" == "Debian GNU/Linu
 	elif [ -d /usr/local/vesta/softaculous/enduser/themes/simple ] ; then
 		cp /usr/local/vesta/softaculous/enduser/themes/simple /usr/local/vesta/softaculous/enduser/themes/original-simple -r
 	fi
-	wget -q https://github.com/cdgco/VestaWebInterface/releases/download/v0.5.4-Beta/backend.tar.gz
+	wget -q https://github.com/cdgco/VestaWebInterface/releases/download/v1.0.0/backend.tar.gz
 	if [ -f backend.tar.gz ] ; then
 		tar -xzf backend.tar.gz -C /usr/local/
 		rm backend.tar.gz
@@ -164,7 +164,7 @@ elif [ "$OS" == "CentOS Linux" ] || [ "$OS" == "RHEL" ]; then
 	fi
 	printf "\nInstalling Vesta Web Interface frontend ...\n"
 	git clone --quiet https://github.com/cdgco/VestaWebInterface . > /dev/null
-    git checkout --quiet 2f631fc > /dev/null
+    git checkout --quiet 9911246 > /dev/null
 	if [ -f README.md ] ; then
 		rm README.md
 	elif [ -f 'VWI Banner.png' ] ; then
@@ -180,7 +180,7 @@ elif [ "$OS" == "CentOS Linux" ] || [ "$OS" == "RHEL" ]; then
 	elif [ -d /usr/local/vesta/softaculous/enduser/themes/simple ] ; then
 		cp /usr/local/vesta/softaculous/enduser/themes/simple /usr/local/vesta/softaculous/enduser/themes/original-simple -r
 	fi
-	wget -q https://github.com/cdgco/VestaWebInterface/releases/download/v0.5.4-Beta/backend.tar.gz
+	wget -q https://github.com/cdgco/VestaWebInterface/releases/download/v1.0.0/backend.tar.gz
 	if [ -f backend.tar.gz ] ; then
 		tar -xzf backend.tar.gz -C /usr/local/
 		rm backend.tar.gz
