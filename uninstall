@@ -38,4 +38,4 @@ elif [ -f /usr/local/vesta/bin/vwi-chmod-file-640 ] ; then
 elif [ -f /usr/local/vesta/bin/vwi-chmod-file-644 ] ; then
   rm /usr/local/vesta/bin/vwi-chmod-file-644
 fi
-printf "\nProcess Complete!.\n"
+printf "\nProcess Complete!.\n\nWe are sorry to see you go.\nPlease consider letting us know why you are uninstalling at http://link.cdgtech.one/un.\n"
