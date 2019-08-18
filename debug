@@ -19,7 +19,7 @@ if [ "$OS" == "Ubuntu" ] || [ "$OS" == "Debian" ] || [ "$OS" == "Debian GNU/Linu
   lsb_release -a
   /usr/local/vesta/bin/v-list-sys-config
   /usr/local/vesta/bin/v-list-sys-services
-elif [ "$OS" == "CentOS Linux"]; then
+elif [ "$OS" == "CentOS Linux" ]; then
   php -v
   cat /etc/centos-release
   /usr/local/vesta/bin/v-list-sys-config
