@@ -59,7 +59,7 @@ if [ "$OS" == "Ubuntu" ] || [ "$OS" == "Debian" ] || [ "$OS" == "Debian GNU/Linu
 	fi
 	read -p "Enter the full web address of your installation: "
         echo "<?php \$vwipanel = '$REPLY'; ?>" > /usr/local/vesta/web/vwi/config.php
-	printf "\nUpdate Complete!\n"
+	printf "\nUpgrade Complete! Please visit your website online to finish configuration.\n"
 elif [ "$OS" == "CentOS Linux" ] || [ "$OS" == "RHEL" ]; then
 	printf "Checking for required packages ...\n"
         if rpm -q wget &> /dev/null
@@ -98,7 +98,7 @@ elif [ "$OS" == "CentOS Linux" ] || [ "$OS" == "RHEL" ]; then
 	fi
 	read -p "Enter the full web address of your installation: "
         echo "<?php \$vwipanel = '$REPLY'; ?>" > /usr/local/vesta/web/vwi/config.php
-	printf "\nUpdate Complete!\n"
+	printf "\nUpgrade Complete! Please visit your website online to finish configuration.\n"
 else
 	echo 'Error: VWI can only be installed on Debian, Ubuntu, CentOS, or RHEL. Exiting ...\n'
 	exit 1
