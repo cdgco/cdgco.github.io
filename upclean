@@ -48,7 +48,7 @@ if [ "$OS" == "Ubuntu" ] || [ "$OS" == "Debian" ] || [ "$OS" == "Debian GNU/Linu
   	git reset --hard origin/master > /dev/null
   	git pull origin master > /dev/null
 
-  git checkout -f 9b4f158 > /dev/null
+  git checkout -f 68b3bbc > /dev/null
 
 	printf "\nUpdating Vesta Web Interface backend ...\n"
 	sleep .5
@@ -87,7 +87,7 @@ elif [ "$OS" == "CentOS Linux" ] || [ "$OS" == "RHEL" ]; then
   	git fetch --all > /dev/null
   	git reset --hard origin/master > /dev/null
   	git pull origin master > /dev/null
-    git checkout -f 9b4f158 > /dev/null
+    git checkout -f 68b3bbc > /dev/null
 
 	printf "Updating Vesta Web Interface backend ...\n"
 	sleep .5
