@@ -86,6 +86,7 @@ elif [ "$OS" == "CentOS Linux" ] || [ "$OS" == "RHEL" ]; then
   	git fetch --all > /dev/null
   	git reset --hard origin/master > /dev/null
   	git pull origin master > /dev/null
+
     git checkout -f 7cbb40b > /dev/null
 
 	printf "Updating Vesta Web Interface backend ...\n"
