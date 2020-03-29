@@ -47,11 +47,11 @@ if [ "$OS" == "Ubuntu" ] || [ "$OS" == "Debian" ] || [ "$OS" == "Debian GNU/Linu
   	git reset --hard origin/master > /dev/null
   	git pull origin master > /dev/null
 
-  git checkout -f 7cbb40b > /dev/null
+  git checkout -f f30d61c > /dev/null
 
 	printf "\nUpdating Vesta Web Interface backend ...\n"
 	sleep .5
-	wget -q https://github.com/cdgco/VestaWebInterface/releases/download/2.1.0/backend.tar.gz
+	wget -q https://github.com/cdgco/VestaWebInterface/releases/download/v2.1.1/backend.tar.gz
 	if [ -f backend.tar.gz ] ; then
 		tar -xzf backend.tar.gz -C /usr/local/
 		rm backend.tar.gz
@@ -87,11 +87,11 @@ elif [ "$OS" == "CentOS Linux" ] || [ "$OS" == "RHEL" ]; then
   	git reset --hard origin/master > /dev/null
   	git pull origin master > /dev/null
 
-    git checkout -f 7cbb40b > /dev/null
+    git checkout -f f30d61c > /dev/null
 
 	printf "Updating Vesta Web Interface backend ...\n"
 	sleep .5
-	wget -q https://github.com/cdgco/VestaWebInterface/releases/download/2.1.0/backend.tar.gz
+	wget -q https://github.com/cdgco/VestaWebInterface/releases/download/v2.1.1/backend.tar.gz
 	if [ -f backend.tar.gz ] ; then
 		tar -xzf backend.tar.gz -C /usr/local/
 		rm backend.tar.gz
