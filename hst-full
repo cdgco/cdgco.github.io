@@ -72,8 +72,6 @@ if [ "$OS" == "Ubuntu" ] || [ "$OS" == "Debian" ] || [ "$OS" == "Debian GNU/Linu
 		tar -xzf backend.tar.gz -C /usr/local/
 		rm backend.tar.gz
 	fi
-	read -p "Enter the full web address of your installation: "
-        echo "<?php \$hwipanel = '$REPLY'; ?>" > /usr/local/hestia/web/hwi/config.php
 	printf "\nInstallation Complete! Please visit your website online to finish configuration.\n"
 else
 	echo 'Error: HWI can only be installed on Debian or Ubuntu. Exiting ...\n'
