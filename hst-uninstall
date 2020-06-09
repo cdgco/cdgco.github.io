@@ -1,0 +1,33 @@
+#!/bin/bash
+
+if [ "x$(id -u)" != 'x0' ]; then
+	echo 'Error: this script can only be executed by root'
+	exit 1
+fi
+printf "\nUninstalling Hestia Web Interface backend ...\n"
+if [ -f /usr/local/hestia/web/templates/r_1.php ] ; then
+  rm /usr/local/hestia/web/templates/r_1.php
+elif [ -f /usr/local/hestia/web/templates/r_2.php ] ; then
+  rm /usr/local/hestia/web/templates/r_2.php
+elif [ -f /usr/local/hestia/web/templates/r_3.php ] ; then
+  rm /usr/local/hestia/web/templates/r_3.php
+elif [ -f /usr/local/hestia/web/reset/reset.php ] ; then
+  rm /usr/local/hestia/web/reset/reset.php
+elif [ -f /usr/local/hestia/web/list/rrd/vwi.php ] ; then
+  rm /usr/local/hestia/web/list/rrd/vwi.php
+elif [ -f /usr/local/hestia/web/download/backup/vwi.php ] ; then
+  rm /usr/local/hestia/web/download/backup/hwi.php
+elif [ -f /usr/local/hestia/web/inc/main-cdg.php ] ; then
+  rm /usr/local/hestia/web/inc/main-cdg.php
+elif [ -f /usr/local/hestia/web/inc/i18n-cdg.php ] ; then
+  rm /usr/local/hestia/web/inc/i18n-cdg.php
+elif [ -d /usr/local/hestia/web/inc/i18n-cdg ] ; then
+  rm /usr/local/hestia/web/inc/i18n-cdg -r
+elif [ -d /usr/local/hestia/web/vwi ] ; then
+  rm /usr/local/hestia/web/vwi -r
+elif [ -f /usr/local/hestia/bin/vwi-chmod-file-640 ] ; then
+  rm /usr/local/hestia/bin/hwi-chmod-file-640
+elif [ -f /usr/local/hestia/bin/vwi-chmod-file-644 ] ; then
+  rm /usr/local/hestia/bin/hwi-chmod-file-644
+fi
+printf "\nProcess Complete!.\n\nWe are sorry to see you go.\nPlease consider letting us know why you are uninstalling at http://link.cdgtech.one/un.\n"
