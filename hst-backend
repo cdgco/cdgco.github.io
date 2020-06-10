@@ -36,7 +36,7 @@ if [ "$OS" == "Ubuntu" ] || [ "$OS" == "Debian" ] ||  [ "$OS" == "Debian GNU/Lin
                 apt-get install -y tar > /dev/null
         fi
 	printf "Installing Hestia Web Interface backend ...\n"
-	wget -q https://github.com/cdgco/HestiaWebInterface/releases/download/v1.0.0/backend.tar.gz
+	wget -q https://github.com/cdgco/HestiaWebInterface/releases/download/v0.1.0-Beta/backend.tar.gz
 	if [ -f backend.tar.gz ] ; then
 		tar -xzf backend.tar.gz -C /usr/local/
 		rm backend.tar.gz
