@@ -17,11 +17,11 @@ defaults:
       layout: "post"
 
 projects:
-  sort_by: pushed
+  sort_by: stars
   # sort_by options:
   #   - pushed
   #   - stars
-  limit: 9
+  limit: 12
   exclude:
     archived: true
     forks: true
@@ -38,7 +38,7 @@ social_media:
   linkedin: CarterRoeser
   # mastodon: your_username
   # medium: your_username
-  stackoverflow: carter-roeser
+  stackoverflow: 5056942
   # telegram: your_username
   twitter: cjroeser
   # unsplash: your_username
