@@ -50,7 +50,7 @@ if [ "$OS" == "Ubuntu" ] || [ "$OS" == "Debian" ] || [ "$OS" == "Debian GNU/Linu
 	printf "\nInstalling Hestia Web Interface frontend ...\n"
 	git clone --quiet https://github.com/cdgco/HestiaWebInterface . > /dev/null
 
-  git checkout --quiet 8eb1e29 > /dev/null
+  git checkout --quiet a4e45b8 > /dev/null
 
 	if [ -f README.md ] ; then
 		rm README.md
