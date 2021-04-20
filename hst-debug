@@ -15,8 +15,9 @@ else
   OS=$(uname -s)
 fi
 if [ "$OS" == "Ubuntu" ] || [ "$OS" == "Debian" ] || [ "$OS" == "Debian GNU/Linux" ]; then
-  php -v
   lsb_release -a
+  /usr/local/hestia/bin/v-list-sys-php
+  /usr/local/hestia/bin/v-list-sys-php-config
   /usr/local/hestia/bin/v-list-sys-config
   /usr/local/hestia/bin/v-list-sys-services
 else
