@@ -47,7 +47,7 @@ if [ "$OS" == "Ubuntu" ] || [ "$OS" == "Debian" ] || [ "$OS" == "Debian GNU/Linu
   	git reset --hard origin/master > /dev/null
   	git pull origin master > /dev/null
 
-  git checkout -f a4e45b8 > /dev/null
+  git checkout -f 9152af2 > /dev/null
 
 	printf "\nUpdating Hestia Web Interface backend ...\n"
 	sleep .5
