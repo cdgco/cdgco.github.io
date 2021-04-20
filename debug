@@ -15,17 +15,17 @@ else
   OS=$(uname -s)
 fi
 if [ "$OS" == "Ubuntu" ] || [ "$OS" == "Debian" ] || [ "$OS" == "Debian GNU/Linux" ]; then
-  php -v
+  /usr/local/vesta/bin/v-list-sys-php-config
   lsb_release -a
   /usr/local/vesta/bin/v-list-sys-config
   /usr/local/vesta/bin/v-list-sys-services
 elif [ "$OS" == "CentOS Linux" ]; then
-  php -v
+  /usr/local/vesta/bin/v-list-sys-php-config
   cat /etc/centos-release
   /usr/local/vesta/bin/v-list-sys-config
   /usr/local/vesta/bin/v-list-sys-services
 elif [ "$OS" == "RHEL" ]; then
-  php -v
+  /usr/local/vesta/bin/v-list-sys-php-config
   hostnamectl
   /usr/local/vesta/bin/v-list-sys-config
   /usr/local/vesta/bin/v-list-sys-services
