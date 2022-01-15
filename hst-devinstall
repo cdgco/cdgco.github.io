@@ -52,7 +52,8 @@ if [ "$OS" == "Ubuntu" ] || [ "$OS" == "Debian" ] || [ "$OS" == "Debian GNU/Linu
 
 	if [ -f README.md ] ; then
 		rm README.md
-	elif [ -f 'HWI Banner.png' ] ; then
+	fi
+	if [ -f 'HWI Banner.png' ] ; then
 		rm 'HWI Banner.png'
 	fi
 	chmod 777 includes
