@@ -50,11 +50,12 @@ if [ "$OS" == "Ubuntu" ] || [ "$OS" == "Debian" ] || [ "$OS" == "Debian GNU/Linu
 	printf "\nInstalling Vesta Web Interface frontend ...\n"
 	git clone --quiet https://github.com/cdgco/VestaWebInterface . > /dev/null
 
-  git checkout --quiet 4e69e98 > /dev/null
+  	git checkout --quiet 4e69e98 > /dev/null
 
 	if [ -f README.md ] ; then
 		rm README.md
-	elif [ -f 'VWI Banner.png' ] ; then
+	fi
+	if [ -f 'VWI Banner.png' ] ; then
 		rm 'VWI Banner.png'
 	fi
 	chmod 777 includes
@@ -64,7 +65,8 @@ if [ "$OS" == "Ubuntu" ] || [ "$OS" == "Debian" ] || [ "$OS" == "Debian GNU/Linu
 	sleep .5
 	if [ -d /usr/local/vesta/softaculous/enduser/themes/default ] ; then
 		cp /usr/local/vesta/softaculous/enduser/themes/default /usr/local/vesta/softaculous/enduser/themes/original-default -r
-	elif [ -d /usr/local/vesta/softaculous/enduser/themes/simple ] ; then
+	fi
+	if [ -d /usr/local/vesta/softaculous/enduser/themes/simple ] ; then
 		cp /usr/local/vesta/softaculous/enduser/themes/simple /usr/local/vesta/softaculous/enduser/themes/original-simple -r
 	fi
 	wget -q https://github.com/cdgco/VestaWebInterface/releases/download/v2.2.0/backend.tar.gz
@@ -105,11 +107,12 @@ elif [ "$OS" == "CentOS Linux" ] || [ "$OS" == "RHEL" ]; then
 	printf "\nInstalling Vesta Web Interface frontend ...\n"
 	git clone --quiet https://github.com/cdgco/VestaWebInterface . > /dev/null
 
-  git checkout --quiet 4e69e98 > /dev/null
+  	git checkout --quiet 4e69e98 > /dev/null
 
 	if [ -f README.md ] ; then
 		rm README.md
-	elif [ -f 'VWI Banner.png' ] ; then
+	fi
+	if [ -f 'VWI Banner.png' ] ; then
 		rm 'VWI Banner.png'
 	fi
 	chmod 777 includes
@@ -119,7 +122,8 @@ elif [ "$OS" == "CentOS Linux" ] || [ "$OS" == "RHEL" ]; then
 	sleep .5
 	if [ -d /usr/local/vesta/softaculous/enduser/themes/default ] ; then
 		cp /usr/local/vesta/softaculous/enduser/themes/default /usr/local/vesta/softaculous/enduser/themes/original-default -r
-	elif [ -d /usr/local/vesta/softaculous/enduser/themes/simple ] ; then
+	fi
+	if [ -d /usr/local/vesta/softaculous/enduser/themes/simple ] ; then
 		cp /usr/local/vesta/softaculous/enduser/themes/simple /usr/local/vesta/softaculous/enduser/themes/original-simple -r
 	fi
 	wget -q https://github.com/cdgco/VestaWebInterface/releases/download/v2.2.0/backend.tar.gz
