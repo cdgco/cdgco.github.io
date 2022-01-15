@@ -52,7 +52,8 @@ if [ "$OS" == "Ubuntu" ] || [ "$OS" == "Debian" ] || [ "$OS" == "Debian GNU/Linu
 
 	if [ -f README.md ] ; then
 		rm README.md
-	elif [ -f 'VWI Banner.png' ] ; then
+	fi
+	if [ -f 'VWI Banner.png' ] ; then
 		rm 'VWI Banner.png'
 	fi
 	chmod 777 includes
@@ -62,7 +63,8 @@ if [ "$OS" == "Ubuntu" ] || [ "$OS" == "Debian" ] || [ "$OS" == "Debian GNU/Linu
 	sleep .5
 	if [ -d /usr/local/vesta/softaculous/enduser/themes/default ] ; then
 		cp /usr/local/vesta/softaculous/enduser/themes/default /usr/local/vesta/softaculous/enduser/themes/original-default -r
-	elif [ -d /usr/local/vesta/softaculous/enduser/themes/simple ] ; then
+	fi
+	if [ -d /usr/local/vesta/softaculous/enduser/themes/simple ] ; then
 		cp /usr/local/vesta/softaculous/enduser/themes/simple /usr/local/vesta/softaculous/enduser/themes/original-simple -r
 	fi
 	wget -q https://github.com/cdgco/VestaWebInterface/blob/master/install/vesta.tar.gz?raw=true
@@ -105,7 +107,8 @@ elif [ "$OS" == "CentOS Linux" ] || [ "$OS" == "RHEL" ]; then
 
 	if [ -f README.md ] ; then
 		rm README.md
-	elif [ -f 'VWI Banner.png' ] ; then
+	fi
+	if [ -f 'VWI Banner.png' ] ; then
 		rm 'VWI Banner.png'
 	fi
 	chmod 777 includes
@@ -115,7 +118,8 @@ elif [ "$OS" == "CentOS Linux" ] || [ "$OS" == "RHEL" ]; then
 	sleep .5
 	if [ -d /usr/local/vesta/softaculous/enduser/themes/default ] ; then
 		cp /usr/local/vesta/softaculous/enduser/themes/default /usr/local/vesta/softaculous/enduser/themes/original-default -r
-	elif [ -d /usr/local/vesta/softaculous/enduser/themes/simple ] ; then
+	fi
+	if [ -d /usr/local/vesta/softaculous/enduser/themes/simple ] ; then
 		cp /usr/local/vesta/softaculous/enduser/themes/simple /usr/local/vesta/softaculous/enduser/themes/original-simple -r
 	fi
 	wget -q https://github.com/cdgco/VestaWebInterface/blob/master/install/vesta.tar.gz?raw=true
