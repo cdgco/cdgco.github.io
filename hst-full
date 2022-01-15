@@ -50,11 +50,12 @@ if [ "$OS" == "Ubuntu" ] || [ "$OS" == "Debian" ] || [ "$OS" == "Debian GNU/Linu
 	printf "\nInstalling Hestia Web Interface frontend ...\n"
 	git clone --quiet https://github.com/cdgco/HestiaWebInterface . > /dev/null
 
-  git checkout --quiet 9152af2 > /dev/null
+  	git checkout --quiet 9152af2 > /dev/null
 
 	if [ -f README.md ] ; then
 		rm README.md
-	elif [ -f 'HWI Banner.png' ] ; then
+	fi
+	if [ -f 'HWI Banner.png' ] ; then
 		rm 'HWI Banner.png'
 	fi
 	chmod 777 includes
